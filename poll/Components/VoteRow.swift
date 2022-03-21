@@ -8,13 +8,19 @@
 import SwiftUI
 
 struct VoteRow: View {
+    // 要望タイトル
+    var title: String
+    // 投票したか
+    var voted: Bool
     var body: some View {
-        Text( /*@START_MENU_TOKEN@*/"Hello, World!" /*@END_MENU_TOKEN@*/)
+        HStack(spacing: 20) {
+            Image(systemName: voted ? "checkmark.circle" : "circle")
+        }
     }
 }
 
 struct VoteRow_Previews: PreviewProvider {
     static var previews: some View {
-        VoteRow()
+        VoteRow(title: "もっといいUIにして欲しい", voted: false)
     }
 }
