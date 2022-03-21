@@ -15,6 +15,7 @@ struct VoteRow: View {
     var body: some View {
         HStack(spacing: 20) {
             Image(systemName: voted ? "checkmark.circle" : "circle")
+            Text(title)
         }
     }
 }
